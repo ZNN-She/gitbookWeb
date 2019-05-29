@@ -12,9 +12,8 @@ console.log(process.env);
 console.log("--------");
 
 const devPath = "../webapp";
-const prodPath = "../../../../../www/gitbook/_book";
-const staticPath = process.env.NODE_ENV === "PROD" ? prodPath : devPath; // 根据变量区分环境
-const port = process.env.NODE_ENV === "PROD" ? 8080 : 3000; // 根据变量区分环境
+const staticPath = process.env.STATIC_PATH || devPath;
+const port = process.env.PORT || 3000;
 
 console.log("--------");
 console.log("staticPath----" + staticPath);
