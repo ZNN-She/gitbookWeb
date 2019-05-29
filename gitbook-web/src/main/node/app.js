@@ -9,7 +9,8 @@ const router = new Router();
 
 // const staticPath = "../webapp";
 // const staticPath = "/root/opt/www/gitbook/_book";
-const staticPath = "../../../../../gitbook/_book";
+// const staticPath = "../../../../../gitbook/_book";
+const staticPath = "../../../../../www/gitbook/_book";
 
 app.use(bodyparser());
 
