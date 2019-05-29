@@ -7,6 +7,8 @@ const koaStatic = require("koa-static");
 const app = new Koa();
 const router = new Router();
 
+console.log(process.env);
+
 const devPath = "../webapp";
 const prodPath = "../../../../../www/gitbook/_book";
 const staticPath = process.env.NODE_ENV === "PROD" ? prodPath : devPath; // 根据变量区分环境
