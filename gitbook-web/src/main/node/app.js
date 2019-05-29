@@ -7,12 +7,22 @@ const koaStatic = require("koa-static");
 const app = new Koa();
 const router = new Router();
 
+console.log("--------");
 console.log(process.env);
+console.log("--------");
 
 const devPath = "../webapp";
 const prodPath = "../../../../../www/gitbook/_book";
 const staticPath = process.env.NODE_ENV === "PROD" ? prodPath : devPath; // 根据变量区分环境
 const port = process.env.NODE_ENV === "PROD" ? 8080 : 3000; // 根据变量区分环境
+
+console.log("--------");
+console.log("staticPath----" + staticPath);
+console.log("--------");
+
+console.log("--------");
+console.log("port----" + staticPath);
+console.log("--------");
 
 app.use(bodyparser());
 
