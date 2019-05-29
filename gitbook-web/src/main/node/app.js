@@ -11,9 +11,8 @@ console.log("--------");
 console.log(process.env);
 console.log("--------");
 
-const devPath = "../webapp";
-const staticPath = process.env.STATIC_PATH || devPath;
-const port = process.env.PORT || 3000;
+const staticPath = process.env.STATIC_PATH;
+const port = process.env.PORT;
 
 console.log("--------");
 console.log("staticPath----" + staticPath);
