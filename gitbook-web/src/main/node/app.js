@@ -21,6 +21,6 @@ app.use(koaStatic(path.join(__dirname, staticPath)));
 
 app.listen(port, () => {
 
-    console.log("[Koa2] start-quick is starting at port 3001");
+    console.log("[Koa2] start-quick is starting at port " + port);
 
 });
