@@ -7,8 +7,9 @@ const koaStatic = require("koa-static");
 const app = new Koa();
 const router = new Router();
 
-const staticPath = "../webapp";
+// const staticPath = "../webapp";
 // const staticPath = "/root/opt/www/gitbook/_book";
+const staticPath = "../../../../../gitbook/_book";
 
 app.use(bodyparser());
 
