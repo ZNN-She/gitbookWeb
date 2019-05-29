@@ -7,10 +7,10 @@ const koaStatic = require("koa-static");
 const app = new Koa();
 const router = new Router();
 
-// const staticPath = "../webapp";
-// const staticPath = "/root/opt/www/gitbook/_book";
-// const staticPath = "../../../../../gitbook/_book";
-const staticPath = "../../../../../www/gitbook/_book";
+const devPath = "../webapp";
+const prodPath = "../../../../../www/gitbook/_book";
+const staticPath = process.env.NODE_ENV === "PROD" ? prodPath : devPath; // 根据变量区分环境
+const port = process.env.NODE_ENV === "PROD" ? 8080 : 3000; // 根据变量区分环境
 
 app.use(bodyparser());
 
@@ -19,7 +19,7 @@ app.use(router.routes()).
 
 app.use(koaStatic(path.join(__dirname, staticPath)));
 
-app.listen(3001, () => {
+app.listen(port, () => {
 
     console.log("[Koa2] start-quick is starting at port 3001");
 
