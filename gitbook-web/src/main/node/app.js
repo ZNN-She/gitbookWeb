@@ -17,8 +17,8 @@ app.use(router.routes()).
 
 app.use(koaStatic(path.join(__dirname, staticPath)));
 
-app.listen(3000, () => {
+app.listen(3001, () => {
 
-    console.log("[Koa2] start-quick is starting at port 3000");
+    console.log("[Koa2] start-quick is starting at port 3001");
 
 });
