@@ -17,6 +17,20 @@ module.exports = {
                 "NODE_ENV": "production",
                 "STATIC_PATH": "../../../../../www/gitbook/_book",
             }
+        },{
+            name: "gitbookDemo",
+            script: "./demoApp.js",
+            watch: true,
+            env: {
+                "PORT": 3001,
+                "NODE_ENV": "development",
+                "STATIC_PATH": "./webapp",
+            },
+            env_production: {
+                "PORT": 8090,
+                "NODE_ENV": "production",
+                "STATIC_PATH": "../../../../../www/dome",
+            }
         }
     ]
 };
